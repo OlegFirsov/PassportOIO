@@ -1,0 +1,140 @@
+unit UnitLoadProgressBar;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.GIFImg, XMLDoc, XMLIntf,
+  IdHashMessageDigest, idHash;
+
+type
+  TFormLoadProgBar = class(TForm)
+    Image1: TImage;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+procedure TestUpdate();
+
+var
+  FormLoadProgBar: TFormLoadProgBar;
+
+implementation
+
+{$R *.dfm}
+
+uses WebDAV;
+
+procedure TFormLoadProgBar.FormCreate(Sender: TObject);
+begin
+  (Image1.Picture.Graphic as TGIFImage).Animate := true;
+  (Image1.Picture.Graphic as TGIFImage).AnimationSpeed := 500;
+  //FormLoadProgBar.DoubleBuffered := true;
+  //проверка есть ли на €ндекс.диск обновление программы
+  TestUpdate();
+end;
+
+procedure TestUpdate();
+const
+  CommandLine = ' CentrePassportOIO';
+var
+  WebDAV: TWebDAVSend;
+  remoteVersion,localVersion, md5RemoteFile, md5DownloadFile: string;
+  arrRV: TArray<string> ;
+  arrLV: TArray<string>;
+  delimiterSet: array [0 .. 0] of char;
+  i: Integer;
+  upXML: IXMLDocument;
+  root, elem: IXMLNode;
+  isUpdate: boolean;
+  StartInfo: TStartupInfo;//CreateProcess
+  ProcInfo: TProcessInformation;//CreateProcess
+  ShellExecuteInfo: TShellExecuteInfo;//ShellExecuteEx
+  idmd5 : TIdHashMessageDigest5;
+  fs : TFileStream;
+begin
+//проверка обновлени€
+  try
+    isUpdate := false;
+    WebDAV := TWebDAVSend.Create;
+    WebDAV.Login := 'poetry77';
+    WebDAV.Password := '189325073';
+    //загружаем сначала update.xml
+    WebDAV.GET('update.xml', ExtractFilePath(GetModName()) + '\update.xml');
+    if FileExists(ExtractFilePath(GetModName()) + '\update.xml') then
+      begin
+        upXml := TXMLDocument.Create(ExtractFilePath(GetModName()) + '\update.xml');
+        upXML.Active := true;
+        root := upXML.ChildNodes['application'];
+        elem := root.ChildNodes.FindNode('version');
+        remoteVersion := elem.Text;
+        elem := root.ChildNodes.FindNode('md5');
+        md5RemoteFile := elem.Text;
+        localVersion := GetVersion();
+        delimiterSet[0] := '.';
+        arrRV := TArray<string>.Create('0','0','0','0');
+        arrLV := TArray<string>.Create('0','0','0','0');
+        arrRV := remoteVersion.Split(delimiterSet);
+        arrLV := localVersion.Split(delimiterSet);
+        for i := 0 to Length(arrRV) - 1  do
+          begin
+            if StrToInt(arrRV[i]) > StrToInt(arrLV[i]) then
+              begin
+                isUpdate := true;
+                break;
+              end;
+          end;
+        FormLoadProgBar.Close;
+
+        if isUpdate then
+          begin
+          WebDAV.GET('CentrePassportOIO.exe', ExtractFilePath(GetModName()) + '\CentrePassportOIO.new');
+          //подсчитываем дл€ скачанного с сервера файла md5
+          idmd5 := TIdHashMessageDigest5.Create;
+          fs := TFileStream.Create(ExtractFilePath(GetModName()) + '\CentrePassportOIO.new',
+            fmOpenRead OR fmShareDenyWrite) ;
+          try
+            md5DownloadFile := idmd5.HashStreamAsHex(fs);
+          finally
+            fs.Free;
+            idmd5.Free;
+          end;
+          if (md5RemoteFile = md5DownloadFile) then
+            begin
+              Application.MessageBox(PWideChar(' Ќа удаленном сервере есть обновление v.' + remoteVersion
+              + '. „тобы закончить обновление - программа будет перегружена.'), '»нформаци€', MB_OK);
+
+              FillChar(StartInfo, sizeof(TStartupInfo), #0);
+              FillChar(ProcInfo, sizeof(TProcessInformation), #0);
+              StartInfo.cb := sizeof(TStartupInfo);
+              //for Windows XP
+              if CreateProcess(nil,PWideChar('updater.exe' + CommandLine),nil,nil,false,
+                CREATE_NEW_PROCESS_GROUP + NORMAL_PRIORITY_CLASS, nil, nil, StartInfo,ProcInfo) then
+                Application.Terminate
+              else
+              begin
+                FillChar(ShellExecuteInfo,sizeof(pShellExecuteInfo),#0);
+                ShellExecuteInfo.cbSize := sizeof(ShellExecuteInfo);
+                //ShellExecuteInfo.fMask := SEE_MASK_FLAG_NO_UI;
+                //ShellExecuteInfo.hwnd := nil;
+                ShellExecuteInfo.lpVerb := 'runas'; // Operation to perform
+                ShellExecuteInfo.lpFile := PWideChar(ExtractFilePath(GetModName()) + '\updater.exe');       // Application to start
+                ShellExecuteInfo.lpParameters := PWideChar(CommandLine);// Additional parameters
+                ShellExecuteInfo.lpDirectory := nil;
+                ShellExecuteInfo.nShow := SW_SHOW;
+                if ShellExecuteEx(@ShellExecuteInfo)then
+                  Application.Terminate;
+              end;
+            end;
+          end;
+      end;
+  finally
+    WebDAV.Destroy;
+  end;
+end;
+
+
+end.

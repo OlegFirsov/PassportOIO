@@ -1,0 +1,30 @@
+program CentrePassportOIO;
+
+uses
+  Vcl.Forms,
+  UnitMain in 'UnitMain.pas' {FormMain},
+  UnitDB in 'UnitDB.pas' {DataMdl: TDataModule},
+  UnitVariables in 'UnitVariables.pas',
+  UnitLogin in 'UnitLogin.pas' {FormLogin},
+  UnitAnketaTables in 'UnitAnketaTables.pas' {FormAnketaTables},
+  UnitChoose in 'UnitChoose.pas' {FormChoose},
+  WebDAV in 'WebDAV.pas',
+  UnitThreadProgBar in 'UnitThreadProgBar.pas',
+  UnitAbout in 'UnitAbout.pas' {AboutBox};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormMain, FormMain);
+  Application.CreateForm(TDataMdl, DataMdl);
+  Application.CreateForm(TFormAnketaTables, FormAnketaTables);
+  Application.CreateForm(TFormChoose, FormChoose);
+  FormLogin := TFormLogin.Create(Application);
+  FormLogin.ShowModal;
+  if ((isTest) and (not isUpdate))  then
+  begin
+    Application.Run;
+  end;
+end.

@@ -1,0 +1,124 @@
+unit UnitChoose;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls;
+
+type
+  TFormChoose = class(TForm)
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    cbRajon: TComboBox;
+    cbHoz: TComboBox;
+    cbRegion: TComboBox;
+    cbYear: TComboBox;
+    btnChoose: TButton;
+    lblRegion: TLabel;
+    lblYear: TLabel;
+    procedure cbRajonChange(Sender: TObject);
+    procedure btnChooseClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure cbRegionChange(Sender: TObject);
+    procedure cbHozChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormChoose: TFormChoose;
+
+implementation
+
+uses UnitDB, UnitVariables, UnitMain, UnitAnketaTables;
+
+{$R *.dfm}
+
+
+procedure TFormChoose.FormShow(Sender: TObject);
+begin
+  DataMdl.SelectFromTable(DataMdl.ADOQueryEdit,'im','spobl','',' ORDER BY im');
+  cbRegion.Clear;
+  while not DataMdl.ADOQueryEdit.Eof  do
+    begin
+      cbRegion.Items.Add(DataMdl.ADOQueryEdit.FieldByName('im').AsString);
+      DataMdl.ADOQueryEdit.Next;
+    end;
+end;
+
+
+procedure TFormChoose.cbRegionChange(Sender: TObject);
+begin
+  region := cbRegion.Text;
+  DataMdl.SelectFromTable(DataMdl.ADOQueryEdit,'im,kodr','kodra',
+    ' WHERE kodr=(SELECT kod FROM spobl WHERE im='+''''+region+''')',' ORDER BY im');
+  cbRajon.Clear;
+  while not DataMdl.ADOQueryEdit.Eof  do
+    begin
+      cbRajon.Items.Add(DataMdl.ADOQueryEdit.FieldByName('im').AsString);
+      DataMdl.ADOQueryEdit.Next;
+    end;
+  kodregion := DataMdl.ADOQueryEdit.FieldByName('kodr').AsString;//код региона S
+end;
+
+procedure TFormChoose.cbHozChange(Sender: TObject);
+begin
+  hoz := cbHoz.Text;
+end;
+
+procedure TFormChoose.cbRajonChange(Sender: TObject);
+begin
+  region := cbRegion.Text;;
+  rajon := cbRajon.Text;
+  if (region <> '') and (rajon <> '') then
+  begin
+      DataMdl.SelectFromTable(DataMdl.ADOQueryEdit,'kodxoz.im as kodxozim',
+        '(spobl INNER JOIN kodra ON spobl.kod = kodra.kodr) '+
+        'INNER JOIN kodxoz ON (kodra.kodr = kodxoz.kodr) AND (kodra.kodraj = kodxoz.kodraj)',
+        ' WHERE spobl.im='+''''+region+''''+' AND kodra.im='+''''+rajon+'''',' ORDER BY kodxoz.im');
+    cbHoz.Clear;
+    while not DataMdl.ADOQueryEdit.Eof do
+      begin
+      cbHoz.Items.Add(DataMdl.ADOQueryEdit.FieldByName('kodxozim').AsString);
+      DataMdl.ADOQueryEdit.Next;
+      end;
+  end;
+end;
+
+procedure TFormChoose.btnChooseClick(Sender: TObject);
+var
+i: Integer;
+begin
+with FormChoose do
+begin
+if ((cbRegion.Text<>'') and (cbRajon.Text<>'') and (cbHoz.Text<>'') and  (cbYear.Text<>'')) then
+  begin
+  //FormMain.StatusBar1.Panels[0].Text:='Работа с таблицами.';
+  if not Assigned(FormAnketaTables) then
+    FormAnketaTables := TFormAnketaTables.Create(Application);
+with DataMdl do
+  begin
+  DataMdl.SelectFromTable(DataMdl.ADOQueryEdit,'kodraj','kodra',' WHERE kodr='+Trim(kodregion)
+  + ' and im LIKE' + '''' + rajon + '''','');
+  kodrajon := ADOQueryEdit.FieldByName('kodraj').AsString;//район
+
+  DataMdl.SelectFromTable(DataMdl.ADOQueryEdit,'kodx','kodxoz',' WHERE kodr='+Trim(kodregion)
+  + ' AND kodraj=' + kodrajon + ' AND im LIKE '+'''' + hoz + '''','');
+  kodhoz := DataMdl.ADOQueryEdit.FieldByName('kodx').AsString;//хозяйство
+end;
+  year := cbYear.Text;
+
+  FormAnketaTables.PageControl1.ActivePageIndex := 0;//открываем анкету
+  FormAnketaTables.ShowModal;
+  end
+  else
+  Application.MessageBox('Нужно выбрать все параметры!', 'Информация', MB_OK);
+end;
+end;
+
+end.

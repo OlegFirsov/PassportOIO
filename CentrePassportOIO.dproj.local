@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.359,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitDB.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.171,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitLoadProgressBar.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\CentrePassportOIO.dproj=C:\Documents and Settings\oleg\Мои документы\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.234,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\UnitAnketaTables\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.593,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.312,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.156,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\UnitDB\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.468,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAnketaTables.pas=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.796,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAddRajon.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.328,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitOkrug.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.468,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAnketaTables.dfm=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitThreadProgBar.pas=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.250,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAbout.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.671,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAddNewOrg.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.578,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\WebDAV.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.968,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.dfm=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitDB.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitAddRegion.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitChoose.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.625,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitVariables.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.265,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitLoadProgressBar.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.171,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\Unit1.dfm=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitLoadProgressBar.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.765,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitLogin.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.562,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.828,=C:\Documents and Settings\oleg\Мои документы\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.593,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitMain.pas=C:\Documents and Settings\oleg\Мои документы\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitSprav.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.593,D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\UnitMain.dfm=C:\Documents and Settings\oleg\Мои документы\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.265,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\UnitChoose\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.187,=C:\Documents and Settings\oleg\Мои документы\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.328,=D:\RAD Studio10.0\Projects\MinSelHozRussia\PassportOIO\Centre\ModelSupport_CentrePassportOIO\CentrePassportOIO\default.txvpck</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ModelSupport_CentrePassportOIO"/>
+    <File Path="ModelSupport_CentrePassportOIO\CentrePassportOIO"/>
+    <File Path="ModelSupport_CentrePassportOIO\CentrePassportOIO\default.txvpck"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitAnketaTables"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitAnketaTables\default.txvpck"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitChoose"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitChoose\default.txvpck"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitDB"/>
+    <File Path="ModelSupport_CentrePassportOIO\UnitDB\default.txvpck"/>
+    <File Path="ModelSupport_CentrePassportOIO\default.txaPackage"/>
+    <File Path="ModelSupport_CentrePassportOIO\default.txvpck"/>
+    <File Path="UnitAbout.pas"/>
+    <File Path="UnitAbout.dfm"/>
+    <File Path="UnitAddNewOrg.pas"/>
+    <File Path="UnitAddNewOrg.dfm"/>
+    <File Path="UnitAddRajon.pas"/>
+    <File Path="UnitAddRajon.dfm"/>
+    <File Path="UnitAddRegion.pas"/>
+    <File Path="UnitAddRegion.dfm"/>
+    <File Path="UnitAnketaTables.pas"/>
+    <File Path="UnitAnketaTables.dfm"/>
+    <File Path="UnitChoose.pas"/>
+    <File Path="UnitChoose.dfm"/>
+    <File Path="UnitDB.pas"/>
+    <File Path="UnitDB.dfm"/>
+    <File Path="UnitLogin.pas"/>
+    <File Path="UnitLogin.dfm"/>
+    <File Path="UnitMain.pas"/>
+    <File Path="UnitMain.dfm"/>
+    <File Path="UnitOkrug.pas"/>
+    <File Path="UnitOkrug.dfm"/>
+    <File Path="UnitSprav.pas"/>
+    <File Path="UnitSprav.dfm"/>
+    <File Path="UnitThreadProgBar.pas"/>
+    <File Path="UnitVariables.pas"/>
+    <File Path="WebDAV.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

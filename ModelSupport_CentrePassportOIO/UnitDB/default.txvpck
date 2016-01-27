@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="z0uztscytsl4hptqk_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:CentrePassportOIO:UnitDB.TDataMdl">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,220,280" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQuerySprSost" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQueryTables" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQueryOpt" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQueryCategory" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.DataSourceBull" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.DataSourceCategory" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.DataSourceSprav" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQueryEdit" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQuerySprav" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOQueryBull" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TDataMdl.ADOConnection1" />
+      <reference referencedUin="delphi:e_method:src:CentrePassportOIO:UnitDB.TDataMdl.DataModuleCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:CentrePassportOIO:UnitDB.TDataMdl.ConnectToDB()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CentrePassportOIO:UnitDB.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.@unitclass.DataMdl" />
+      <reference referencedUin="delphi:e_method:src:CentrePassportOIO:UnitDB.@unitclass.transform(System.ShortString)" />
+      <reference referencedUin="delphi:l_ast:src:CentrePassportOIO:UnitDB.@unitclass.DataMdl" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:CentrePassportOIO:UnitDB.TAnketa">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="249,1,132,943" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fid" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fkodr" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fkodrn" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fkodh" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fp_ind" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fposel" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Ftel" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Ffax" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Femail" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Frs" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fks" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fnalog" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fbik_rs" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fbank" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Ftown" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fstrength" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fspec" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Ffam" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fcolpred" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fcolzootech" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fproczootech" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fcolzoosel" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fproczoosel" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fcoltechplem" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fproctechplem" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fpl" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fpash" />
+      <reference referencedUin="delphi:e_field:src:CentrePassportOIO:UnitDB.TAnketa.Fseno" />
+      <reference referencedUin="delphi:e_method:src:CentrePassportOIO:UnitDB.TAnketa.Create(System.Integer,System.Integer,System.Integer,System.Integer,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:CentrePassportOIO:UnitDB.TAnketa.Create(System.Integer,System.Integer,System.Integer,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Id" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Kodr" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Kodrn" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Kodh" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.P_ind" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Posel" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Tel" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Fax" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.email" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Rs" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Ks" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Nalog" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Bik_rs" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Bank" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Town" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Strength" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Spec" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Fam" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Colpred" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Colzootech" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Proczootech" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Colzoosel" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Proczoosel" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Coltechplem" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Proctechplem" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Pl" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Pash" />
+      <reference referencedUin="delphi:e_property:src:CentrePassportOIO:UnitDB.TAnketa.Seno" />
+    </reference>
+  </view>
+</nodeSet>
